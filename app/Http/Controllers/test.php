@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TestMail;
 use Illuminate\Http\Request;
 use App\Http\Requests\validateForm;
+use Illuminate\Support\Facades\Mail;
 
 class test extends Controller
 {
@@ -24,5 +26,9 @@ class test extends Controller
         }else{
             return redirect()->back();
         }   
+    }
+    public function bar(){
+        Mail::to('test@gmail.com')->send(new TestMail());
+        return redirect()->back();
     }
 }

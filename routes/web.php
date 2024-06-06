@@ -12,6 +12,7 @@ Route::get('/register', function () {
     return view('users.acceuil');
 })->name('registration');
 Route::get('/test/{username}', [test::class,'method1']);//
+Route::get('/bar', [test::class,'bar']);//
 Route::middleware('guest')->group(function(){
     Route::post('/register',[userController::class,'register'])->name('register');
     Route::post('/acceuil',[test::class,'store']);//
