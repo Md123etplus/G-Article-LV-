@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\gestionArticles;
 use App\Http\Controllers\test;
-use App\Http\Controllers\userController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\userController;
+use App\Http\Controllers\gestionArticles;
 
 Route::get('/', function () {
     return view('users.index');
