@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Notifications\TestNotif;
 use App\Http\Requests\articleForm;
 use App\Http\Requests\loginRequest;
 use App\Http\Requests\validateForm;
@@ -27,6 +28,7 @@ class userController extends Controller
             //     'email'=>$request->email,
             //     'password'=>$request->motdepasse,
             // ]);
+            $user->notify(new TestNotif());
             return redirect('/login')->with('success','Inscription effectuee avec succes!!');
         }else{
             return redirect()->back();
