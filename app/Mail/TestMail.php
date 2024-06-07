@@ -13,13 +13,13 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class TestMail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $data=[];
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(Array $user)
     {
-        //
+        $this->data=$user;
     }
 
     /**
@@ -50,6 +50,8 @@ class TestMail extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return [
+            Attachment::fromPath(public_path('favicon.ico')),
+        ];
     }
 }

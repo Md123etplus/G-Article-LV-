@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Helloooooooooo</h1>
+    <h1>Helloooooooooo {{$data['name']}}</h1>
 </body>
 </html>

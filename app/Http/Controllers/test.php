@@ -28,7 +28,8 @@ class test extends Controller
         }   
     }
     public function bar(){
-        Mail::to('test@gmail.com')->send(new TestMail());
+        $user=['mail'=>'test@gmai.com','name'=>'Moussa Dembele'];
+        Mail::to($user['mail'])->send(new TestMail($user));
         return redirect()->back();
     }
 }
