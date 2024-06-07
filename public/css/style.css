@@ -1,0 +1,19 @@
+.mt-2{
+    margin-top:2rem !important;
+}
+.form-product{
+    margin-top:2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.card .titre{
+    font-weight:bold;
+    font-size:20px;
+    border-bottom:solid #f3f3f3;
+    margin-left:1rem;
+}
+.description{
+    margin-left:1rem;
+    margin-top:1rem 
+}
